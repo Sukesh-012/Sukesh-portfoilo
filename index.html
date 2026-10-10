@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kakkunuri Sukesh Reddy | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #f8f1e1;
+  --surface: #fffcf5;
+  --ink: #12182b;
+  --muted: #5b6479;
+  --blue: #306998;
+  --navy: #15244d;
+  --yellow: #ffc857;
+  --line: #e9dfc8;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.7 Inter, sans-serif;
+}
+
+body.dark {
+  --bg: #0e1424;
+  --surface: #161e33;
+  --ink: #eef1f8;
+  --muted: #a3adc4;
+  --blue: #6aa7d8;
+  --navy: #0b1226;
+  --line: #26304a;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--ink);
+  margin: 5px;
+}
+
+button, .btn {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn {
+  background: var(--navy);
+  color: white;
+}
+
+section { padding: 75px 0; }
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 45px;
+}
+
+h1, h2, h3 {
+  font-family: Sora, sans-serif;
+  line-height: 1.3;
+}
+
+h1 { font-size: clamp(32px, 5vw, 55px); }
+
+h1 span { color: var(--blue); }
+
+p, .muted { color: var(--muted); }
+
+.photo {
+  width: min(280px, 80vw);
+  aspect-ratio: 1;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 5px solid var(--surface);
+  box-shadow: 0 12px 35px #0002;
+  animation: float 5s ease-in-out infinite;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+@keyframes float {
+  50% { transform: translateY(-8px); }
+}
+
+.card {
+  background: var(--surface);
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  background: var(--line);
+  padding: 6px 13px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+@media(max-width: 700px) {
+  .hero .wrap, .grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav { padding: 12px 0; }
+  section { padding: 45px 0; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <strong>Sukesh Reddy</strong>
+      <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+        <button onclick="document.body.classList.toggle('dark')">🌙</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <p>● Open to Python Developer Roles</p>
+      <h1>Hi, I'm <span>Kakkunuri Sukesh Reddy</span></h1>
+      <p>B.Tech Computer Science graduate interested in Python, SQL, data analysis and machine learning. I enjoy building practical projects and solving problems using technology.</p>
+      <a class="btn" href="#projects">View My Projects</a>
+      <a class="btn" href="#contact">Contact Me</a>
+    </div>
+
+    <div class="photo">
+      <img src="profile.jpg.jpeg"
+           alt="Kakkunuri Sukesh Reddy profile photo">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I am a Computer Science Engineering graduate interested in Python development, machine learning and data analytics. I want to apply my technical knowledge to real-world problems and continue improving my skills.</p>
+      <p><strong>Name:</strong> Kakkunuri Sukesh Reddy</p>
+      <p><strong>Degree:</strong> B.Tech in Computer Science Engineering</p>
+      <p><strong>Career Goal:</strong> Python Developer</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>My Skills</h2>
+    <div class="card">
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">React</span>
+        <span class="chip">Machine Learning</span>
+        <span class="chip">Data Analysis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>B.Tech - Computer Science Engineering</h3>
+      <p>Saveetha School of Engineering</p>
+      <p>Graduation Year: 2026</p>
+      <p>CGPA: 7.62</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>My Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Millet Nutrition Analysis</h3>
+        <p>Evaluating the nutritional composition of millets using machine learning techniques.</p>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">Machine Learning</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Customer Lifetime Value Analysis</h3>
+        <p>Using data analytics and machine learning concepts to study customer lifetime value for marketing decisions.</p>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">Analytics</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Bus Delay and Route Analyzer</h3>
+        <p>A project concept for analyzing bus delays and comparing route performance.</p>
+        <div class="chips">
+          <span class="chip">Data Analysis</span>
+          <span class="chip">Web Development</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certs">
+  <div class="wrap">
+    <h2>Certifications</h2>
+    <div class="card">
+      <p>Add your verified Oracle certification and other completed course certificates here.</p>
+    </div>
+  </div>
+</section>
+
+<section id="resume">
+  <div class="wrap">
+    <h2>Resume</h2>
+    <div class="card">
+      <h3>Kakkunuri Sukesh Reddy</h3>
+      <p>Python Developer | SQL | Data Analysis</p>
+      <p>B.Tech CSE, 2026</p>
+      <p>Skills: Python, SQL, HTML, CSS, JavaScript</p>
+      <button class="btn" onclick="window.print()">Save as PDF</button>
+    </div>
+  </div>
+</
